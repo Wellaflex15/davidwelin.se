@@ -1,42 +1,99 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-attachment: fixed;
-    background-size: 100%;
-  }
-
-.hidden {
-    display: none;
+/* for using variables */
+:root{
+  --navColor: #333333;
+  --firstColor:#0fffff;
+  --secondColor: #aaaaaa;
+  --mainText:#055555;
 }
 
-h1, h3 {
-    padding-top: 100px;
-    text-align: center;
-}
-
-#container {
-    height: 50vh;
-    width: 50vw;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-#main_picture {
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    animation: rotate 3s infinite linear;
-}
-
-@keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to { 
-      transform: rotate(360deg);
-    }
-  }
+/* main css */
+html, body{
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth; /* TODO - check what this does */
   
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: var(--mainText);
+  font-family: 'Press Start 2P', cursive;
+}
+
+h1 { font-size: 56; }
+h2 { font-size: 36; }
+h3 { font-size: 28; }
+h4 { font-size: 24; }
+h5 { font-size: 20; }
+h6 { font-size: 16; }
+
+
+nav {
+  background: #222;
+  padding: 0 15px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+.navbar{
+  background-color: var(--navColor);
+  border-top: 3px solid chartreuse;
+  border-bottom: 3px solid chartreuse;
+  padding: 0;
+}
+
+
+/* Fullsize - Desktop navbar */
+.menu{
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: left;
+}
+
+.menu li{
+  margin: 0;
+  padding: 5px;
+}
+
+.menu li a {
+  display: block;
+  padding: 15px 5px;
+  background-color: chartreuse;
+}
+
+.logo{
+  font-size: 20px;
+  padding: 7.5px 10px 7.5px 0;
+  order: 0;
+}
+
+.navItem{
+  padding: 10px;
+  order: 1;
+  position: relative;
+  display: block;
+  width: auto;
+}
+
+.navItem a:hover{
+  color: #ccc;
+}
+
+/* TODO - tablet and phone */
+
+.section1{
+  background-color: var(--firstColor);
+  border-bottom: 2px solid black;
+  overflow: auto; 
+}
+
+.section2{
+  background-color: var(--secondColor);
+  border-bottom: 2px solid black;
+  overflow: auto; 
+}
