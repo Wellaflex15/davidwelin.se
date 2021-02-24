@@ -1,61 +1,76 @@
 /* for using variables */
-:root{
+:root {
   --navColor: #333333;
-  --firstColor:#0fffff;
+  --firstColor: #0fffff;
   --secondColor: #aaaaaa;
-  --mainText:#055555;
+  --mainText: #055555;
 }
 
 /* main css */
-html, body{
+html,
+body {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth; /* TODO - check what this does */
-  
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--mainText);
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
-h1 { font-size: 56; }
-h2 { font-size: 36; }
-h3 { font-size: 28; }
-h4 { font-size: 24; }
-h5 { font-size: 20; }
-h6 { font-size: 16; }
-
+h1 {
+  font-size: 56;
+}
+h2 {
+  font-size: 36;
+}
+h3 {
+  font-size: 28;
+}
+h4 {
+  font-size: 24;
+}
+h5 {
+  font-size: 20;
+}
+h6 {
+  font-size: 16;
+}
 
 nav {
   background: #222;
   padding: 0 15px;
 }
 
-a{
+a {
   color: white;
   text-decoration: none;
 }
 
-.navbar{
+.navbar {
   background-color: var(--navColor);
   border-top: 3px solid chartreuse;
   border-bottom: 3px solid chartreuse;
   padding: 0;
 }
 
-
 /* Fullsize - Desktop navbar */
-.menu{
+.menu {
   margin: 0;
   list-style-type: none;
   display: flex;
   align-items: flex-start;
   flex-wrap: nowrap;
-  justify-content: left;
+  justify-content: center;
 }
 
-.menu li{
+.menu li {
   margin: 0;
   padding: 5px;
 }
@@ -66,13 +81,13 @@ a{
   background-color: chartreuse;
 }
 
-.logo{
+.logo {
   font-size: 20px;
   padding: 7.5px 10px 7.5px 0;
   order: 0;
 }
 
-.navItem{
+.navItem {
   padding: 10px;
   order: 1;
   position: relative;
@@ -80,20 +95,41 @@ a{
   width: auto;
 }
 
-.navItem a:hover{
+.navItem a:hover {
   color: #ccc;
 }
 
 /* TODO - tablet and phone */
 
-.section1{
+.section1 {
   background-color: var(--firstColor);
   border-bottom: 2px solid black;
-  overflow: auto; 
+  overflow: auto;
 }
 
-.section2{
+.section2 {
   background-color: var(--secondColor);
   border-bottom: 2px solid black;
-  overflow: auto; 
+  overflow: auto;
+}
+
+/* Header css */
+.header h1 {
+  text-align: center;
+}
+
+/* Canvas or animation css */
+.gameSection {
+  text-align: center;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#gameCanvas {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #000000;
 }
